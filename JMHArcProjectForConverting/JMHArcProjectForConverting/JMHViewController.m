@@ -27,6 +27,7 @@ struct JMHStruct
 - (void)retainReleaseExample;
 - (void)bridgeExample;
 - (void)coreFoundationExample;
+- (NSArray *)returnArrayExample;
 
 @end
 
@@ -87,6 +88,12 @@ struct JMHStruct
     const void *num[3] = {"1", "2", "3"};
     CFArrayRef cfArray = CFArrayCreate(kCFAllocatorDefault, num, 1, NULL);
     CFRelease(cfArray);
+}
+
+- (NSArray *)returnArrayExample
+{
+    NSArray *array = [[NSArray alloc] initWithObjects:@"juanmao", nil];
+    return [array autorelease];
 }
 
 - (void)didReceiveMemoryWarning {
