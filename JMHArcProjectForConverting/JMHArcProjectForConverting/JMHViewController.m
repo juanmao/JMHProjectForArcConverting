@@ -33,6 +33,8 @@ struct JMHStruct
 - (void)dispatchExample;
 
 - (void)AllBridgeExample;
+
+- (void)caseExample:(int)num;
 @end
 
 @implementation JMHViewController
@@ -42,6 +44,15 @@ struct JMHStruct
 {
     [super init];
     self.label = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    return self;
+}
+
+- (instancetype)initwithDelegate:(id)delegate
+{
+    if (self = [super init]) {
+        assignDelegate = delegate;
+    }
     
     return self;
 }
@@ -56,6 +67,7 @@ struct JMHStruct
     
     [self AllBridgeExample];
     [self dispatchExample];
+    [self caseExample:3];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -114,6 +126,23 @@ struct JMHStruct
 {
     JMHDemoObj *obj = [[JMHDemoObj alloc] init];
     [obj doSomething];
+    [obj weakUnsafe_unRetainedCompare];
+}
+
+- (void)caseExample:(int)num
+{
+    switch (num) {
+        case 0:
+            NSLog(@"0");
+            NSObject *obj = [[NSObject alloc] init];
+            [obj class];
+            break;
+        case 1:
+            obj = [[NSObject alloc] init];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -130,5 +159,7 @@ struct JMHStruct
     
     [super dealloc];
 }
+
+
 
 @end

@@ -55,4 +55,21 @@
     return [NSString stringWithUTF8String:"juanmao"];
 }
 
+- (void)weakUnsafe_unRetainedCompare
+{
+    __unsafe_unretained id unsafeObj;
+    __weak id weakObj;
+    
+    {
+        id strongObj = [[NSObject alloc] init];
+        unsafeObj = strongObj;
+        weakObj = strongObj;
+    }
+    
+    NSLog(@"unsafe_unretained obj is %@", unsafeObj);
+    NSLog(@"weak obj is %@", weakObj);
+    
+}
+
+
 @end

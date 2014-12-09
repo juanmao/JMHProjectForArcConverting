@@ -12,4 +12,5 @@
 
 - (void)doSomething;
 
+- (void)weakUnsafe_unRetainedCompare;
 @end

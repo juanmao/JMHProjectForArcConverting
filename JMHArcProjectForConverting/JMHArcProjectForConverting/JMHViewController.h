@@ -17,8 +17,11 @@
 @interface JMHViewController : UIViewController
 
 @property (nonatomic, retain) UIButton *button;
+@property (nonatomic, copy) NSString *newName;
 @property (nonatomic, assign) id<JMHViewControllerDelegate> delegate;
 
+
+- (instancetype)initwithDelegate:(id)delegate;
 
 @end
 
