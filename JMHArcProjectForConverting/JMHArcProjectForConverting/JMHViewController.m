@@ -7,6 +7,7 @@
 //
 
 #import "JMHViewController.h"
+#import "JMHDemoObj.h"
 
 
 struct JMHStruct
@@ -29,6 +30,9 @@ struct JMHStruct
 - (void)coreFoundationExample;
 - (NSArray *)returnArrayExample;
 
+- (void)dispatchExample;
+
+- (void)AllBridgeExample;
 @end
 
 @implementation JMHViewController
@@ -49,6 +53,9 @@ struct JMHStruct
     [self autoreleaseExample];
     [self bridgeExample];
     [self coreFoundationExample];
+    
+    [self AllBridgeExample];
+    [self dispatchExample];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -96,6 +103,19 @@ struct JMHStruct
     return [array autorelease];
 }
 
+- (void)dispatchExample
+{
+    self.myQueue = dispatch_queue_create("com.juanmao.hu", NULL);
+    dispatch_retain(self.myQueue);
+    dispatch_release(self.myQueue);
+}
+
+- (void)AllBridgeExample
+{
+    JMHDemoObj *obj = [[JMHDemoObj alloc] init];
+    [obj doSomething];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -105,6 +125,8 @@ struct JMHStruct
 {
     self.label = nil;
     self.button = nil;
+    dispatch_release(self.myQueue);
+    self.myQueue = nil;
     
     [super dealloc];
 }

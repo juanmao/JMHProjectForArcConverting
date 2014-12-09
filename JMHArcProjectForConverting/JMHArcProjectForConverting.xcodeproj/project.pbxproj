@@ -14,6 +14,7 @@
 		A6D3D8351A35DD2300F7AED9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6D3D8341A35DD2300F7AED9 /* Images.xcassets */; };
 		A6D3D8381A35DD2300F7AED9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D3D8361A35DD2300F7AED9 /* LaunchScreen.xib */; };
 		A6D3D8441A35DD2300F7AED9 /* JMHArcProjectForConvertingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D3D8431A35DD2300F7AED9 /* JMHArcProjectForConvertingTests.m */; };
+		A6D3D84F1A36C1A300F7AED9 /* JMHDemoObj.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D3D84E1A36C1A300F7AED9 /* JMHDemoObj.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		A6D3D83D1A35DD2300F7AED9 /* JMHArcProjectForConvertingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMHArcProjectForConvertingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D3D8421A35DD2300F7AED9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6D3D8431A35DD2300F7AED9 /* JMHArcProjectForConvertingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMHArcProjectForConvertingTests.m; sourceTree = "<group>"; };
+		A6D3D84D1A36C1A300F7AED9 /* JMHDemoObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMHDemoObj.h; sourceTree = "<group>"; };
+		A6D3D84E1A36C1A300F7AED9 /* JMHDemoObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMHDemoObj.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				A6D3D82C1A35DD2300F7AED9 /* AppDelegate.m */,
 				A6D3D82E1A35DD2300F7AED9 /* JMHViewController.h */,
 				A6D3D82F1A35DD2300F7AED9 /* JMHViewController.m */,
+				A6D3D84D1A36C1A300F7AED9 /* JMHDemoObj.h */,
+				A6D3D84E1A36C1A300F7AED9 /* JMHDemoObj.m */,
 				A6D3D8311A35DD2300F7AED9 /* Main.storyboard */,
 				A6D3D8341A35DD2300F7AED9 /* Images.xcassets */,
 				A6D3D8361A35DD2300F7AED9 /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				A6D3D8301A35DD2300F7AED9 /* JMHViewController.m in Sources */,
 				A6D3D82D1A35DD2300F7AED9 /* AppDelegate.m in Sources */,
+				A6D3D84F1A36C1A300F7AED9 /* JMHDemoObj.m in Sources */,
 				A6D3D82A1A35DD2300F7AED9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +418,7 @@
 				A6D3D8491A35DD2300F7AED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6D3D84A1A35DD2300F7AED9 /* Build configuration list for PBXNativeTarget "JMHArcProjectForConvertingTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				A6D3D84C1A35DD2300F7AED9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
